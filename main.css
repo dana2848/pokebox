@@ -1,7 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
-<script src='main.js'></script>
-</body>
-</html>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 10px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  margin-right: 50%;
+    justify-content: center;
+}
+
+nav {
+  clear:both;
+  color: black;
+  background-color: yellow;
+  height: 30px;
+  font-family: Arial;
+  position: absolute;
+  left: 20%;
+  margin-right: 20%;
+
+}
+
+nav ul {
+  margin: 0px;
+  padding: 5px 0px 5px 30px;
+
+}
+
+nav li {
+  display: inline;
+  margin-right: 40px;
+
+  }
