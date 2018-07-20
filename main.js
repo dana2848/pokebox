@@ -1,39 +1,147 @@
-//mikes API coding
+//mikes API coding hp - integer
+// attack - integer
+// defense - integer
+// abilities - array of strings
+class Pokemon {
+  constructor(name, hp, attack, defense, abilities){
+    this.name = name;
+    this.hp = hp;
+    this.attack = attack;
+    this.defense = defense;
+    this.abilities = abilities;
+  }
+}
 
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("info").innerHTML =
-      this.responseText;
+      //document.getElementById("info").innerHTML =
+      //JSON.parse(this.responseText)
+      //this.responseText;
+      var myObj = JSON.parse(this.responseText);
+      var bulbasaur = new Pokemon (
+        this.name = myObj.name,
+        this.hp = myObj.stats[5].base_stat,
+        this.attack = myObj.stats[4].base_stat,
+        this.defense = myObj.stats[1].base_stat,
+        this.abilities = myObj.abilities[0].ability.name,
+      );
+      document.getElementById("bulbasaur-name").innerHTML = 'my name is ' + bulbasaur.name;
+      document.getElementById("bulbasaur-hp").innerHTML = 'my help point is ' + bulbasaur.hp;
+      document.getElementById("bulbasaur-attack").innerHTML = 'my attack is ' + bulbasaur.attack;
+      document.getElementById("bulbasaur-defense").innerHTML = 'my defense is ' + bulbasaur.defense;
+      document.getElementById("bulbasaur-ability").innerHTML = bulbasaur.abilities;
+      // console.log(bulbasaur.name);
+
+
+
     }
-  };
-  xhttp.open("GET", "https://raw.githubusercontent.com/mlaw-nycda/data/master/data", true);
+  }
+  xhttp.open("GET","https://pokeapi.co/api/v2/pokemon/1/", true);
+  console.log(xhttp);
+  xhttp.send();
+}
+
+function loadDoc2() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("info").innerHTML =
+      //JSON.parse(this.responseText)
+      //this.responseText;
+      var myObj = JSON.parse(this.responseText);
+      var squirtle = new Pokemon (
+        this.name = myObj.name,
+        this.hp = myObj.stats[5].base_stat,
+        this.attack = myObj.stats[4].base_stat,
+        this.defense = myObj.stats[1].base_stat,
+          this.abilities = myObj.abilities[0].ability.name,
+      );
+      document.getElementById("bulbasaur-name").innerHTML = 'my name is ' + squirtle.name;
+      document.getElementById("bulbasaur-hp").innerHTML = 'my help point is ' + squirtle.hp;
+      document.getElementById("bulbasaur-attack").innerHTML = 'my attack is ' + squirtle.attack;
+      document.getElementById("bulbasaur-defense").innerHTML = 'my defense is ' + squirtle.defense;
+      document.getElementById("bulbasaur-ability").innerHTML = squirtle.abilities;
+      // console.log(squirtle.name);
+
+    }
+  }
+  xhttp.open("GET","https://pokeapi.co/api/v2/pokemon/7/", true);
+  console.log(xhttp);
   xhttp.send();
 }
 
 
-// console.log ('I work')
-//
-// class Classic {
-//   constructor(art_url){
-//     this.art_url = art_url;
-//     this.frame = 'borderframe';
-//     this.render = function() {
-//       var x = document.createElement('img');
-//       var b = document.getElementById('container')
-//       x.src = this.art_url;
-//       x.classList.add(this.frame);
-//       b.appendChild(x);
-//     }
-// }
-//
-// }
-//
-// class Meme extends Classic {
-//   constructor(art_url){
-//     super(art_url);
-//     this.frame = 'frame1'
-//     x.classList.add(this.frame);
-//   }
-// }
+function loadDoc3() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("info").innerHTML =
+      //JSON.parse(this.responseText)
+      //this.responseText;
+      var myObj = JSON.parse(this.responseText);
+      var metapod = new Pokemon (
+        this.name = myObj.name,
+        this.hp = myObj.stats[5].base_stat,
+        this.attack = myObj.stats[4].base_stat,
+        this.defense = myObj.stats[1].base_stat,
+          this.abilities = myObj.abilities[0].ability.name,
+      );
+      document.getElementById("bulbasaur-name").innerHTML = 'my name is ' + metapod.name;
+      document.getElementById("bulbasaur-hp").innerHTML = 'my help point is ' + metapod.hp;
+      document.getElementById("bulbasaur-attack").innerHTML = 'my attack is ' + metapod.attack;
+      document.getElementById("bulbasaur-defense").innerHTML = 'my defense is ' + metapod.defense;
+      document.getElementById("bulbasaur-ability").innerHTML = metapod.abilities;
+      // console.log(squirtle.name);
+
+    }
+  }
+  xhttp.open("GET","https://pokeapi.co/api/v2/pokemon/11/", true);
+  console.log(xhttp);
+  xhttp.send();
+}
+
+
+
+function loadPokemon() {
+  var xhttp = new XMLHttpRequest();
+  console.log(xhttp);
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      document.getElementById('info').src = myObj.sprites.front_default;
+      console.log(this.responseText);
+    }
+  };
+  xhttp.open("GET","https://pokeapi.co/api/v2/pokemon/1/", true);
+  xhttp.send();
+}
+
+function loadPokemon2() {
+  var xhttp = new XMLHttpRequest();
+  console.log(xhttp);
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      document.getElementById('info').src = myObj.sprites.front_default;
+      console.log(this.responseText);
+    }
+  };
+  xhttp.open("GET","https://pokeapi.co/api/v2/pokemon/7/", true);
+  xhttp.send();
+}
+
+function loadPokemon3() {
+  var xhttp = new XMLHttpRequest();
+  console.log(xhttp);
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      document.getElementById('info').src = myObj.sprites.front_default;
+      console.log(this.responseText);
+    }
+  };
+  xhttp.open("GET","https://pokeapi.co/api/v2/pokemon/11/", true);
+  xhttp.send();
+}
