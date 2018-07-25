@@ -8,8 +8,7 @@ header {
   padding-bottom: 0px; }
 
 nav {
-  clear: both;
-  background-color: yellow;
+    background-color: yellow;
   height: 30px;
   font-family: Dekko, cursive;
   position: relative;
@@ -43,24 +42,25 @@ h1 {
 
 #btn_border {
   color: green;
-  width: 200px;
   position: relative;
-  border-width: thick; }
+  border-width: thick;
+  padding: 19px;
+   }
 
 /* div {
     display: block;
 } */
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 30% 50%;
   padding: 10px;
   z-index: 1;
   grid-gap: 10px; }
 
 .btns {
   z-index: 500;
-  width: 200px;
-  float: left; }
+  /*width: 200px;*/
+  /*float: left;*/ }
 
 .grid-item1 {
   font-size: 20px;
@@ -89,6 +89,56 @@ h1 {
 
 div {
   display: block; }
+
+/*
+#bulbasaur ul{
+  margin-top: 124px;
+  text-align: center;
+}
+
+*/
+
+.container-grid{
+
+display: grid;
+grid-template-columns: 30% auto 30% ;
+grid-template-rows: 50%;
+grid-template-areas: "buttons  details   picture";
+}
+
+
+.g1{
+  grid-area: buttons;
+}
+
+.g2{
+  grid-area: details;
+}
+
+
+.g3{
+  grid-area: picture;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .button {
   background-color: #4CAF50;
