@@ -8,7 +8,7 @@ header {
   padding-bottom: 0px; }
 
 nav {
-    background-color: yellow;
+  background-color: yellow;
   height: 30px;
   font-family: Dekko, cursive;
   position: relative;
@@ -44,8 +44,7 @@ h1 {
   color: green;
   position: relative;
   border-width: thick;
-  padding: 19px;
-   }
+  padding: 19px; }
 
 /* div {
     display: block;
@@ -95,50 +94,21 @@ div {
   margin-top: 124px;
   text-align: center;
 }
-
 */
+.container-grid {
+  display: grid;
+  grid-template-columns: 30% auto 30%;
+  grid-template-rows: 50%;
+  grid-template-areas: "buttons  details   picture"; }
 
-.container-grid{
+.g1 {
+  grid-area: buttons; }
 
-display: grid;
-grid-template-columns: 30% auto 30% ;
-grid-template-rows: 50%;
-grid-template-areas: "buttons  details   picture";
-}
+.g2 {
+  grid-area: details; }
 
-
-.g1{
-  grid-area: buttons;
-}
-
-.g2{
-  grid-area: details;
-}
-
-
-.g3{
-  grid-area: picture;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.g3 {
+  grid-area: picture; }
 
 /* .button {
   background-color: #4CAF50;
@@ -167,6 +137,7 @@ grid-template-areas: "buttons  details   picture";
   padding: 20px 0;
   font-size: 30px;
 } */
+/*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */
