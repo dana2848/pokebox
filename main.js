@@ -74,7 +74,7 @@ function loadDoc() {
       //JSON.parse(this.responseText)
       //this.responseText;
       var myObj = JSON.parse(this.responseText);
-      var squirtle = new Pokemon (
+      var bulbasaur = new Pokemon (
         this.name = myObj.name,
         this.hp = myObj.stats[5].base_stat,
         this.attack = myObj.stats[4].base_stat,
@@ -83,16 +83,16 @@ function loadDoc() {
           this.img = myObj.sprites.front_default
       );
       document.getElementById('info').src = myObj.sprites.front_default;
-      document.getElementById("bulbasaur-name").innerHTML = 'my name is ' + squirtle.name;
-      document.getElementById("bulbasaur-hp").innerHTML = 'my help point is ' + squirtle.hp;
-      document.getElementById("bulbasaur-attack").innerHTML = 'my attack is ' + squirtle.attack;
-      document.getElementById("bulbasaur-defense").innerHTML = 'my defense is ' + squirtle.defense;
-      document.getElementById("bulbasaur-ability").innerHTML = squirtle.abilities;
+      document.getElementById("name").innerHTML = 'my name is ' + bulbasaur.name;
+      document.getElementById("hp").innerHTML = 'my help point is ' + bulbasaur.hp;
+      document.getElementById("attack").innerHTML = 'my attack is ' + bulbasaur.attack;
+      document.getElementById("defense").innerHTML = 'my defense is ' + bulbasaur.defense;
+      document.getElementById("ability").innerHTML = bulbasaur.abilities;
       // console.log(squirtle.name);
 
     }
   }
-  xhttp.open("GET","https://pokeapi.co/api/v2/pokemon/7/", true);
+  xhttp.open("GET","https://raw.githubusercontent.com/dana2848/pokebox/master/poke1.json", true);
   console.log(xhttp);
   xhttp.send();
 }
@@ -115,16 +115,16 @@ function loadDoc2() {
           this.img = myObj.sprites.front_default
       );
       document.getElementById('info').src = myObj.sprites.front_default;
-      document.getElementById("bulbasaur-name").innerHTML = 'my name is ' + squirtle.name;
-      document.getElementById("bulbasaur-hp").innerHTML = 'my help point is ' + squirtle.hp;
-      document.getElementById("bulbasaur-attack").innerHTML = 'my attack is ' + squirtle.attack;
-      document.getElementById("bulbasaur-defense").innerHTML = 'my defense is ' + squirtle.defense;
-      document.getElementById("bulbasaur-ability").innerHTML = squirtle.abilities;
+      document.getElementById("name").innerHTML = 'my name is ' + squirtle.name;
+      document.getElementById("hp").innerHTML = 'my help point is ' + squirtle.hp;
+      document.getElementById("attack").innerHTML = 'my attack is ' + squirtle.attack;
+      document.getElementById("defense").innerHTML = 'my defense is ' + squirtle.defense;
+      document.getElementById("ability").innerHTML = squirtle.abilities;
       // console.log(squirtle.name);
 
     }
   }
-  xhttp.open("GET","https://pokeapi.co/api/v2/pokemon/7/", true);
+  xhttp.open("GET","https://raw.githubusercontent.com/dana2848/pokebox/master/poke7.json", true);
   console.log(xhttp);
   xhttp.send();
 }
@@ -147,16 +147,16 @@ function loadDoc3() {
           this.img = myObj.sprites.front_default
       );
       document.getElementById('info').src = myObj.sprites.front_default;
-      document.getElementById("bulbasaur-name").innerHTML = 'my name is ' + metapod.name;
-      document.getElementById("bulbasaur-hp").innerHTML = 'my help point is ' + metapod.hp;
-      document.getElementById("bulbasaur-attack").innerHTML = 'my attack is ' + metapod.attack;
-      document.getElementById("bulbasaur-defense").innerHTML = 'my defense is ' + metapod.defense;
-      document.getElementById("bulbasaur-ability").innerHTML = metapod.abilities;
+      document.getElementById("name").innerHTML = 'my name is ' + metapod.name;
+      document.getElementById("hp").innerHTML = 'my help point is ' + metapod.hp;
+      document.getElementById("attack").innerHTML = 'my attack is ' + metapod.attack;
+      document.getElementById("defense").innerHTML = 'my defense is ' + metapod.defense;
+      document.getElementById("ability").innerHTML = metapod.abilities;
       // console.log(squirtle.name);
 
     }
   }
-  xhttp.open("GET","https://pokeapi.co/api/v2/pokemon/11/", true);
+  xhttp.open("GET","https://raw.githubusercontent.com/dana2848/pokebox/master/poke11.json", true);
   console.log(xhttp);
   xhttp.send();
 }
