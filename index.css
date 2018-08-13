@@ -51,6 +51,14 @@ nav li {
 
                        ;
 }
+.img-grid {
+	display: grid;
+	grid-template: 500px / 50% 50%;
+	grid-gap: 3%;
+}
+
+
+
 
 
 .buttons{
